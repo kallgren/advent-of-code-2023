@@ -6,6 +6,9 @@
   (-> (slurp f)
       (str/split-lines)))
 
+(defn contains-value? [coll v]
+  (some #(= % v) coll))
+
 (defn get-char [s i]
   (subs s i (inc i)))
 
